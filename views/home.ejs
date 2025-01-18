@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <img src="/<%= imgSrc %>" alt="image">
+    </header>
+    <main>
+        <form action="/greet" method="post">
+            <h1><%= message %></h1> <br>
+            <input type="text" name="name"> <br> <br>
+            <button type="submit">Enter</button>
+        </form>
+        <br> <br> <br>
+        <aside>
+       <% if(fname !== null) {%> 
+        <% if(fname === "") { %>
+            <h1>Can not be empty</h1>
+        <% } else if (fname === "mithu") { %>
+            <h1>Hey brooo, what's up!!!</h1>
+        <% } else { %>
+            <h1>Hello <%= fname %>, nice to see you</h1>
+        <% } %>
+       <% }%>   
+       </aside>          
+    </main>
+    <footer>
+         <strong>All rights reserverd by &copy; ME Arifur Rahman</strong>
+    </footer>
+</body>
+</html>
